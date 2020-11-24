@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Быки и Коровы</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Sontsev Alexander">
+  <meta name="reply-to" content="asln@inbox.ru">
+<link rel="stylesheet" type="text/css" href="CSS/BullsAndCowsStyle.css">
+</head>
+<body>
+
+<div class="container" id="Game">
+
+<p> 
+Целевое число: <span class = "number">неизвестно</span> 
+<button  id = "newGame" onclick="reloadPage()">Начать заново</button> 
+</p>
+
+<p></p>
+
+<p> Осталось попыток: <span class ="turns">10</span></p>
+
+<div class = "form">
+Введите число:<input type = "text" name = "player" autocomplete="off" pattern = "[0-9]{4}" placeholder="символы запрещены" maxlength= "4" onkeypress="return keyPress('0123456789')" id = "player">
+<input type = "button" name = "Ok" id = "guess" value = "Попытка" onclick="guess(); delguess()">
+</div>
+
+<div class = "table">
+  <div class = "turnsLog">
+  </div>
+</div>
+
+</div>
+
+
+<script src="JS/BullsAndCowsBoard.js"></script>
+
+</body>
+</html>
